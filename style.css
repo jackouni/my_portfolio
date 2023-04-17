@@ -1,128 +1,127 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: black;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.first-name,
+.last-name {
+  display: inline-block;
+  font-size: 10rem;
+  color: rgb(255, 255, 255);
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: text-shadow 0.5s ease-in-out;
+  transition: font-size 0.2s ease;
+
+}
+
+.tagline {
+  font-size: 2rem;
+  position: fixed;
+  top: 46%;
+  right: 38.5%;
+  color: white;
+  opacity: 0;
+  transition: font-size 0.2s ease-in-out, opacity 1s ease;;
+}
+
+
+/* Slide in animation for first-name and last-name */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50%) translateX(-400%);
   }
-  
-  .container {
-    position: relative;
-    text-align: center;
+  90% {
+    transform: translateY(-50%) translateX(0);
   }
-  
-  .first-name,
-  .last-name {
-    display: inline-block;
-    font-size: 10rem;
-    color: rgb(255, 255, 255);
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: text-shadow 0.5s ease-in-out;
-    transition: font-size 0.2s ease;
-  
+  100% {
+    transform: translateY(-50%) translateX(0);
   }
-  
-  .tagline {
-    font-size: 2rem;
-    position: fixed;
-    top: 46%;
-    right: 38.5%;
-    color: white;
-    opacity: 0;
-    transition: font-size 0.2s ease-in-out, opacity 1s ease;;
+}
+
+@keyframes slideInReverse {
+  0% {
+    transform: translateY(-50%) translateX(400%);
   }
-  
-  
-  /* Slide in animation for first-name and last-name */
-  @keyframes slideIn {
-    0% {
-      transform: translateY(-50%) translateX(-400%);
-    }
-    90% {
-      transform: translateY(-50%) translateX(0);
-    }
-    100% {
-      transform: translateY(-50%) translateX(0);
-    }
+  90% {
+    transform: translateY(-50%) translateX(0);
   }
-  
-  @keyframes slideInReverse {
-    0% {
-      transform: translateY(-50%) translateX(400%);
-    }
-    90% {
-      transform: translateY(-50%) translateX(0);
-    }
-    100% {
-      transform: translateY(-50%) translateX(0);
-    }
+  100% {
+    transform: translateY(-50%) translateX(0);
   }
-  
-  .last-name {
-    left: 50%;
-    animation: slideIn 1s ease-out forwards;
+}
+
+.last-name {
+  left: 50%;
+  animation: slideIn 1s ease-out forwards;
+}
+
+.first-name {
+  right: 50%;
+  margin-right: 14px;
+  animation: slideInReverse 1s ease-out forwards;
+}
+
+
+/* Color transition for first-name and last-name */
+@keyframes colorTransition {
+  0% {
+    color: rgb(0, 238, 255);
   }
-  
-  .first-name {
-    right: 50%;
-    margin-right: 14px;
-    animation: slideInReverse 1s ease-out forwards;
+  5%{
+    color: rgb(0, 255, 89);
   }
-  
-  
-  /* Color transition for first-name and last-name */
-  @keyframes colorTransition {
-    0% {
-      color: rgb(0, 238, 255);
-    }
-    5%{
-      color: rgb(0, 255, 89);
-    }
-    15% {
-      color: yellow;
-    }
-    25% {
-      color: rgb(187, 0, 255);
-    }
-    35% {
-      color: rgb(255, 115, 0);
-    }
-    45% {
-      color: rgb(255, 0, 0);
-    }
-    55% {
-      color: yellow;
-    }
-    65% {
-      color: rgb(255, 115, 0);
-    }
-    75% {
-      color: rgb(208, 0, 255);
-    }
-    85% {
-      color: rgb(255, 0, 0);
-    }
-    95%{
-      color: rgb(0, 255, 89);
-    }
-    100% {
-      color: rgb(0, 238, 255);
-    }
+  15% {
+    color: yellow;
   }
-  
-  .first-name:hover,
-  .last-name:hover {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-    cursor: pointer;
-    font-size: 165px;
+  25% {
+    color: rgb(187, 0, 255);
   }
-  
-  .tagline:hover {
-   font-size: 33px;
+  35% {
+    color: rgb(255, 115, 0);
   }
-  
+  45% {
+    color: rgb(255, 0, 0);
+  }
+  55% {
+    color: yellow;
+  }
+  65% {
+    color: rgb(255, 115, 0);
+  }
+  75% {
+    color: rgb(208, 0, 255);
+  }
+  85% {
+    color: rgb(255, 0, 0);
+  }
+  95%{
+    color: rgb(0, 255, 89);
+  }
+  100% {
+    color: rgb(0, 238, 255);
+  }
+}
+
+.first-name:hover,
+.last-name:hover {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-size: 165px;
+}
+
+.tagline:hover {
+ font-size: 33px;
+}
