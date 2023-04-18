@@ -10,28 +10,46 @@ body {
   width: 100%;
 }
 .column-left {
-  width:18%;
+  width:15%;
   height: 100vh;
-  background-image: linear-gradient(to right, #b6b6b6 200px, #000000);
+background-color: rgb(176, 176, 176);
 }
 
 .column-right {
+  position: relative;
   height: 100vh;
   width:100%;
   background-color: #000000;
+  overflow: hidden;
+  color: whitesmoke;
 }
 
 #sidebar {
   display: flex;
-  padding: 15px;
-  font-size: 1.1rem;
   flex-direction: column;
-  align-items: center;
   font-family: monospace;
 }
 
 #sidebar li {
+  text-align: center;
+  font-size: 1.1rem;
   list-style-type: none;
   margin-top: 25px;
   margin-bottom: 30px;
 }
+
+.column-right > * {
+  text-align: center;
+  position: relative;
+  left: 0%;
+}
+
+#navigate {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 60%;
+  font-size: 0.9rem;
+  border-bottom: solid black 1px;
+}
+
+
