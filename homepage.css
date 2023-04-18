@@ -38,6 +38,8 @@ body {
 }
 
 .column-right {
+  background-image: url(images/1_me.jpeg);
+  background-size:contain;
   position: relative;
   height: 100vh;
   width:100%;
@@ -48,6 +50,19 @@ body {
   color: whitesmoke;
 }
 
+.column-right > section h1 {
+  font-size: 8rem;
+  margin-left: 40rem;
+  color: rgb(255, 255, 255);
+}
+
+#whoami {
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  border: solid rgb(150, 150, 150) 2px;
+  font-size: 1.5rem;
+}
 #sidebar {
   display: flex;
   flex-direction: column;
