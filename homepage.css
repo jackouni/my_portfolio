@@ -29,16 +29,20 @@ body {
 }
 
 .column-left {
-
+  position: fixed;
   width:12rem;
   height: 100vh;
   background-color: rgb(176, 176, 176);
+  transform: translateX(-100%);
+  animation: columnSlideIn 800ms ease-in-out forwards;
 }
 
 .column-right {
   position: relative;
   height: 100vh;
   width:100%;
+  width: calc(100% - 12rem); /* subtract the width of the fixed .column-left element */
+  margin-left: 12rem; /* add left margin equal to the width of the fixed .column-left element */
   background-color: #000000;
   overflow: hidden;
   color: whitesmoke;
