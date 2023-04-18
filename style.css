@@ -78,40 +78,40 @@ body {
 /* Color transition for first-name and last-name */
 @keyframes colorTransition {
   0% {
-    color: rgb(0, 238, 255);
+    color: rgb(255, 255, 255);
   }
   5%{
-    color: rgb(0, 255, 89);
+    color: rgb(68, 68, 68);
   }
   15% {
-    color: yellow;
+    color: rgb(168, 168, 168);
   }
   25% {
-    color: rgb(187, 0, 255);
+    color: rgb(88, 88, 88);
   }
   35% {
-    color: rgb(255, 115, 0);
+    color: rgb(147, 147, 147);
   }
   45% {
-    color: rgb(255, 0, 0);
+    color: rgb(34, 34, 34);
   }
   55% {
-    color: yellow;
+    color: rgb(126, 126, 126);
   }
   65% {
-    color: rgb(255, 115, 0);
+    color: rgb(211, 211, 211);
   }
   75% {
-    color: rgb(208, 0, 255);
+    color: rgb(37, 37, 37);
   }
   85% {
-    color: rgb(255, 0, 0);
+    color: rgb(187, 187, 187);
   }
   95%{
-    color: rgb(0, 255, 89);
+    color: rgb(52, 52, 52);
   }
   100% {
-    color: rgb(0, 238, 255);
+    color: rgb(255, 255, 255);
   }
 }
 

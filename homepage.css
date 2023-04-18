@@ -5,14 +5,34 @@ body {
   background-color: black;
 }
 
+@keyframes columnSlideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes liFadeIn {
+  0%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .container {
   display: flex;
   width: 100%;
 }
+
 .column-left {
-  width:15%;
+
+  width:12rem;
   height: 100vh;
-background-color: rgb(176, 176, 176);
+  background-color: rgb(176, 176, 176);
 }
 
 .column-right {
@@ -31,12 +51,40 @@ background-color: rgb(176, 176, 176);
 }
 
 #sidebar li {
+  opacity: 0;
   text-align: center;
   font-size: 1.1rem;
   list-style-type: none;
   margin-top: 25px;
   margin-bottom: 30px;
+  transition: 0.5s;
+  animation: liFadeIn 0.6s ease-in-out forwards;
 }
+
+/* The individual <li> item's fade-in animation */
+  #sidebar li:nth-child(1) {
+    animation-delay: 1s;
+  }
+
+  #sidebar li:nth-child(2) {
+    animation-delay: 1.25s;
+  }
+
+  #sidebar li:nth-child(3) {
+    animation-delay: 1.5s;
+  }
+
+  #sidebar li:nth-child(4) {
+    animation-delay: 1.75s;
+  }
+
+  #sidebar li:nth-child(5) {
+    animation-delay: 2s;
+  }
+
+  #sidebar li:nth-child(6) {
+    animation-delay: 2.25s;
+  }
 
 .column-right > * {
   text-align: center;
@@ -51,5 +99,20 @@ background-color: rgb(176, 176, 176);
   font-size: 0.9rem;
   border-bottom: solid black 1px;
 }
+
+.column-left {
+  animation: columnSlideIn 800ms ease-in-out forwards;
+}
+
+#sidebar li:hover{
+  font-size: 1.2rem;
+  cursor: pointer;
+
+}
+
+
+
+
+
 
 
