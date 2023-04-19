@@ -1,10 +1,10 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: black;
+/* Imported Fonts */
+@font-face {
+  font-family: 'CalendarNotes';
+  src: url(fonts/calendarnotetfb.ttf) format('truetype');
 }
 
+/* @keyframe Animations */
 @keyframes columnSlideIn {
   0% {
     transform: translateX(-100%);
@@ -23,11 +23,21 @@ body {
   }
 }
 
+/* DOCUMENT BODY */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
 .container {
   display: flex;
   width: 100%;
+  height: 100rem;
 }
 
+/* LEFT COLUMN: SIDEBAR */
 .column-left {
   position: fixed;
   width:12rem;
@@ -37,36 +47,28 @@ body {
   animation: columnSlideIn 800ms ease-in-out forwards;
 }
 
-.column-right {
-  background-image: url(images/1_me.jpeg);
-  background-size:contain;
-  position: relative;
-  height: 100vh;
-  width:100%;
-  width: calc(100% - 12rem); /* subtract the width of the fixed .column-left element */
-  margin-left: 12rem; /* add left margin equal to the width of the fixed .column-left element */
-  background-color: #000000;
-  overflow: hidden;
-  color: whitesmoke;
-}
-
-.column-right > section h1 {
-  font-size: 8rem;
-  margin-left: 40rem;
-  color: rgb(255, 255, 255);
-}
-
-#whoami {
-  position: absolute;
-  background-color: rgb(0, 0, 0);
-  width: 100%;
-  border: solid rgb(150, 150, 150) 2px;
-  font-size: 1.5rem;
-}
 #sidebar {
   display: flex;
   flex-direction: column;
   font-family: monospace;
+}
+
+#navigate {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 60%;
+  font-size: 0.9rem;
+  border-bottom: solid black 1px;
+}
+
+.column-left {
+  animation: columnSlideIn 800ms ease-in-out forwards;
+}
+
+#sidebar li:hover{
+  font-size: 1.2rem;
+  cursor: pointer;
+
 }
 
 #sidebar li {
@@ -105,29 +107,57 @@ body {
     animation-delay: 2.25s;
   }
 
+/* RIGHT COLUMN: CONTENT */
+.column-right {
+  position: relative;
+  height: 100vh;
+  width:100%;
+  width: calc(100% - 12rem); /* subtract the width of the fixed .column-left element */
+  margin-left: 12rem; /* add left margin equal to the width of the fixed .column-left element */
+  background-color: #000000;
+  overflow: hidden;
+  color: whitesmoke;
+}
+
 .column-right > * {
   text-align: center;
   position: relative;
   left: 0%;
 }
 
-#navigate {
-  margin-top: 10px;
-  margin-left: 10px;
-  width: 60%;
-  font-size: 0.9rem;
-  border-bottom: solid black 1px;
+.column-right > section h1 {
+  font-size: 7rem;
+  margin-right: 40rem;
+  color: rgb(255, 255, 255);
 }
 
-.column-left {
-  animation: columnSlideIn 800ms ease-in-out forwards;
-}
+/* whoami? Section */
+  #whoami {
+    display: flex;
+    background-image: url(images/1_me.jpeg);
+    background-repeat: no-repeat;
+    background-size: 80% auto;
+    background-position: left 18rem top 5rem; /* aligns the image to the right with 20px of space */
+  }
 
-#sidebar li:hover{
-  font-size: 1.2rem;
-  cursor: pointer;
+  #whoami-title {
+    font-family: 'CalendarNotes';
+    font-size: 200px;
+  }
 
-}
+  #whoami-p {
+    position: absolute;
+    margin-top: 0px;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    border: solid rgb(150, 150, 150) 2px;
+    font-size: 1.5rem;
+  }
+
+/* Projects Section */
+
+
+
 
 
 
