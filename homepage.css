@@ -52,7 +52,8 @@ body {
   position: fixed;
   width:12%;
   height: 100vh;
-  background-color: rgb(176, 176, 176);
+  background-color: #8BD5C1;
+  color: #090018;
   transform: translateX(-100%);
   animation: columnSlideIn 1000ms ease-in-out forwards;
 }
@@ -116,15 +117,16 @@ body {
     margin-top: 30%;
   }
 
-/* RIGHT COLUMN: CONTENT */
+  /* RIGHT COLUMN: CONTENT */
 .column-right {
   position: relative;
   overflow-y: scroll;
   margin-left: 12%;
-  height: 100%;
+  height: auto;
   width: 88%; 
-  background-color: #202020;
-  color: whitesmoke;
+  background-color: #090018;
+  background-image: linear-gradient(to right top, #090018, #192135, #243d54, #2f5b71, #3d7b8c);
+  color: #fafafa;
 }
 
 .column-right > section h1 {
@@ -138,7 +140,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: auto;
+    height: 40%;
     background-image: url(images/1_me.jpeg);
     background-repeat: no-repeat;
     background-size: 70% auto;
@@ -154,33 +156,40 @@ body {
   }
 
   #whoami-tagline {
-    font-family:'rainyhearts' ;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
     margin: 0px;
+    margin-bottom: 3%;
     padding-top: 2%;
-    background-color: rgb(0, 0, 0);
+    background-color: #5CA8AA;
     color: rgb(238, 255, 0);
     width: 100%;
     height: auto;
-    font-size: 2.5vw;
-    font-weight: 100;
+    font-size: 2vw;
+    font-weight: 500;
   }
 
   #whoami-text {
-    margin-top: 10%;
-    font-family:'rainyhearts';
+    margin-top: 15%;
+    font-family:'Courier New', Courier, monospace;
     font-weight: 100;
     align-self: center;
-    background-color: black;
+    background-color: #5CA8AA;
     font-size: 1.9vw;
     padding-top: 2%;
     padding-bottom: 2%;
     padding-left: 4%;
     padding-right: 4%;
     width: 70%;
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.941)
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.941)
   }
 
 /* Projects Section */
+  #projects-title {
+    white-space: nowrap;
+    text-align: center;
+    font-family: 'CalendarNotes';
+    font-size: 10vw;
+  }
 
 
 
