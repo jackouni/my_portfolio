@@ -4,6 +4,16 @@
   src: url(fonts/calendarnotetfb.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'fipps-regular';
+  src: url(fonts/Fipps-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'rainyhearts';
+  src: url(fonts/rainyhearts.ttf) format('truetype');
+}
+
 /* @keyframe Animations */
 @keyframes columnSlideIn {
   0% {
@@ -144,10 +154,9 @@ body {
   }
 
   #whoami-tagline {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-family:'rainyhearts' ;
+    margin: 0px;
     padding-top: 2%;
-    margin-bottom: 0%;
-    margin-top: 5%;
     background-color: rgb(0, 0, 0);
     color: rgb(238, 255, 0);
     width: 100%;
@@ -157,7 +166,8 @@ body {
   }
 
   #whoami-text {
-    font-family:'Courier New', Courier, monospace;
+    margin-top: 10%;
+    font-family:'rainyhearts';
     font-weight: 100;
     align-self: center;
     background-color: black;
@@ -166,7 +176,8 @@ body {
     padding-bottom: 2%;
     padding-left: 4%;
     padding-right: 4%;
-    width: 92%;
+    width: 70%;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.941)
   }
 
 /* Projects Section */
