@@ -140,7 +140,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 40%;
+    height: auto;
     background-image: url(images/1_me.jpeg);
     background-repeat: no-repeat;
     background-size: 70% auto;
@@ -184,12 +184,68 @@ body {
   }
 
 /* Projects Section */
-  #projects-title {
-    white-space: nowrap;
+  #projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+  }
+  
+    #projects-title {
+      margin: 0px;
+      margin-top: 3%;
+      text-align: center;
+      font-family: 'CalendarNotes';
+      font-size: 10vw;
+    }
+
+  .project-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: solid red 3px;
+  }
+
+  .project-thumbnail {
+      width: 100%;
+      height: auto;
+  }
+
+  .project-title {
+      margin: 10px 0;
+  }
+
+  .project-description {
+      text-align: center;
+  }
+
+/* Programming Section */
+  #programming-title {
+    margin-top: 3%;
     text-align: center;
     font-family: 'CalendarNotes';
     font-size: 10vw;
   }
+
+
+
+/* Unicycling Section */
+  #uni-title {
+    margin-top: 3%;
+    text-align: center;
+    font-family: 'CalendarNotes';
+    font-size: 10vw;
+  }
+
+/* Unicycling Section */
+  #blog-title {
+    margin-top: 3%;
+    text-align: center;
+    font-family: 'CalendarNotes';
+    font-size: 10vw;
+  }
+
+
 
 
 
