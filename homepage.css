@@ -50,9 +50,10 @@ body {
 /* LEFT COLUMN: SIDEBAR */
 .column-left {
   position: fixed;
+  min-width: 107px;
   width:12%;
   height: 100vh;
-  background-color: #8BD5C1;
+  background-color: #FFE6C7;
   color: #090018;
   transform: translateX(-100%);
   animation: columnSlideIn 1000ms ease-in-out forwards;
@@ -119,13 +120,15 @@ body {
 
   /* RIGHT COLUMN: CONTENT */
 .column-right {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
   overflow-y: scroll;
   margin-left: 12%;
   height: auto;
   width: 88%; 
   background-color: #090018;
-  background-image: linear-gradient(to right top, #090018, #192135, #243d54, #2f5b71, #3d7b8c);
+  background-image: linear-gradient(to right top, #090018, #454545, #FF6000, #FFA559, #FFE6C7);
   color: #fafafa;
 }
 
@@ -148,6 +151,10 @@ body {
   }
 
   #whoami-title {
+    background-image: linear-gradient(to right, #090018, #454545, #FF6000, #FFA559, #FFE6C7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     white-space: nowrap;
     text-align: center;
     font-family: 'CalendarNotes';
@@ -160,7 +167,7 @@ body {
     margin: 0px;
     margin-bottom: 3%;
     padding-top: 2%;
-    background-color: #5CA8AA;
+    background-color: #FFA559;
     color: rgb(238, 255, 0);
     width: 100%;
     height: auto;
@@ -173,7 +180,7 @@ body {
     font-family:'Courier New', Courier, monospace;
     font-weight: 100;
     align-self: center;
-    background-color: #5CA8AA;
+    background-color: #FFA559;
     border-radius: 5px;
     font-size: 1.9vw;
     padding-top: 2%;
@@ -185,18 +192,25 @@ body {
   }
 
 /* Projects Section */
+
+  #projects {
+    background-color: rgb(69, 69, 69);
+    border: solid #FFE6C7 3px ;
+    padding: 5%;
+  }
+
   #projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
-    padding: 20px;
+    padding: 0px;
   }
   
     #projects-title {
       margin: 0px;
-      margin-top: 3%;
       text-align: center;
       font-family: 'CalendarNotes';
+      color: #FFE6C7;
       font-size: 10vw;
     }
 
@@ -239,6 +253,10 @@ body {
 
 /* Unicycling Section */
   #uni-title {
+    background-image: linear-gradient(to left, #090018, #454545, #FF6000, #FFA559, #FFE6C7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     margin-top: 3%;
     text-align: center;
     font-family: 'CalendarNotes';
@@ -252,6 +270,15 @@ body {
     font-family: 'CalendarNotes';
     font-size: 10vw;
   }
+  #uni-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: solid red 3px;
+    margin-left: 5%;
+    width: 90%;
+    height: auto;
+  }
+
 
 
 
