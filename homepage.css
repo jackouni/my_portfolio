@@ -14,37 +14,68 @@
   src: url(fonts/rainyhearts.ttf) format('truetype');
 }
 
-/* @keyframe Animations */
-@keyframes columnSlideIn {
+@keyframes slideInFromLeft {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-500%);
   }
   100% {
+    transform: translateX(0);  
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(500%);
+  }
+  100% {
+    color: white;
     transform: translateX(0);
   }
 }
 
-@keyframes liFadeIn {
-  0%{
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+@keyframes fadeIn {
+0%, 50% {opacity: 0;}
+100% {opacity: 1;}
 }
 
 body {
   display: flex;
-  margin: 0%;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(0, 5, 32);
 }
 
+#header {
+  display: grid ;
+  width: 50%;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: auto auto; 
+}
 
+#first-name, #last-name {
+  font-size: 6rem;
+  font-family: 'CalendarNotes';
+  color: white;
+  text-align: center;
+  margin: 0px;
+}
 
+#first-name {
+  margin-right: 0px;
+  animation: slideInFromRight 1.5s ease-out;
+}
 
+#last-name {
+  margin-left: 0px;
+  animation: slideInFromLeft 1.5s ease-out;
+}
 
-
-
-
+#tagline {
+  text-align: center;
+  color: whitesmoke;
+  grid-column: 1 / 3;
+  animation: fadeIn 2.5s ease-in;
+}
 
 
 
